@@ -1,0 +1,17 @@
+replicaCount: 2
+image:
+  repository: your-docker-repo/hextris #Replace your-docker-repo/hextris with your actual image repository.
+  tag: latest
+  pullPolicy: IfNotPresent
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 250m
+    memory: 256Mi
+
+service:
+  type: ClusterIP
+  port: 80
