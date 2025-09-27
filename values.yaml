@@ -1,6 +1,6 @@
 replicaCount: 2
 image:
-  repository: your-docker-repo/hextris #Replace your-docker-repo/hextris with your actual image repository.
+  repository: aksacrtestrln9074t.azurecr.io/hextris:v1.0.2 #Replace your-docker-repo/hextris with your actual image repository.
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -15,3 +15,14 @@ resources:
 service:
   type: ClusterIP
   port: 80
+
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: azure/application-gateway
+  hosts:
+    - host: ""
+      paths:
+        - path: /
+          pathType: Exact
+  servicePort: 80
