@@ -3,5 +3,5 @@ name: hextris
 version: 0.1.0
 description: A Helm chart for deploying the Hextris Nginx app
 
-# This is a basic Helm chart structure for deploying the Hextris Nginx application.
+# This is a basic Helm chart structure for deploying the Hextris application.
 # helm install hextris ./hextris-chart

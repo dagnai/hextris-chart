@@ -2,8 +2,7 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Values.service.name }}
-  namespace: {{ .Values.namespace }}
+  name: {{ include "hextris.fullname" . }}
   annotations:
     kubernetes.io/ingress.class: azure/application-gateway
 spec:
@@ -15,7 +14,7 @@ spec:
             pathType: Exact
             backend:
               service:
-                name: {{ $.Values.service.name }}
+                name: {{ include "hextris.fullname" . }}
                 port:
                   number: 80
 {{- end }}

@@ -1,7 +1,7 @@
 replicaCount: 2
 image:
-  repository: aksacrtestrln9074t.azurecr.io/hextris:v1.0.2 #Replace your-docker-repo/hextris with your actual image repository.
-  tag: latest
+  repository: aksacrtestxcai753h.azurecr.io/hextris
+  tag: v1.0.2
   pullPolicy: IfNotPresent
 
 resources:
